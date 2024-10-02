@@ -104,7 +104,7 @@ mean: ${summary.mean.toFixed(2)}`}
         {keyObservations && keyObservations.length > 0 && (
           <div>
             <h3 className="text-xl font-semibold mb-2 text-gray-700 text-center">
-              Key Observations
+              Key Observations and Comparisons
             </h3>
             {keyObservations.map((observation, index) => (
               <p key={index} className="text-gray-600 mb-3 pl-4 pr-4">

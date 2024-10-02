@@ -30,13 +30,9 @@ function App() {
     title: "AP Statistics Chapter 1 Project: Typing Speed Comparison",
     overview: [
       "If some texts don't display properly, please make sure your browser is in light mode.",
-      "The datasets I chose are results from typing tests using keyboard and mobile. Both datasets are produced by myself \
-      through completing the 'words 10 english' test on monkeytype.com on an iPhone and an Apple Magic Keyboard for the mobile \
-      typing speed dataset and the keyboard typing speed dataset, respectively.",
-      "Word Per Minute (WPM) is calculated as (number of characters typed correctly / 5) * (60 / time spent typing). \
-      This is a common formula for calculating an accurate WPM considering the lengths of different words.",
-      "The datasets are comprised of 67 test results recorded as WPM. I wanted to explore the difference between keyboard typing and mobile typing. \
-      I understand that in most cases, keyboard will be faster than typing on mobile but I'm curious to see the variability, distribution, and specific differences between the two methods.",
+      "The datasets I chose are results from typing tests using keyboard and mobile. Both datasets are produced by myself through completing the 'words 10 english' test on monkeytype.com on an iPhone and an Apple Magic Keyboard for the mobile typing speed dataset and the keyboard typing speed dataset, respectively.",
+      "Words Per Minute (WPM) is calculated as (number of characters typed correctly / 5) * (60 / time spent typing). This is a common formula for calculating an accurate WPM considering the lengths of different words.",
+      "The datasets comprise 67 test results recorded as WPM. I wanted to explore the difference between keyboard typing and mobile typing. I understand that in most cases, keyboard typing will be faster than mobile typing, but I'm curious to see the variability, distribution, and specific differences between the two methods.",
     ],
     keyObservations: [""],
   };
@@ -44,77 +40,56 @@ function App() {
   const histoText = {
     title: "Histogram Analysis",
     overview: [
-      "From the histogram, we see that both datasets are roughly symmetrical with the keyboard WPM dataset having a single peak at 125 to 130 WPM with a \
-      frequency of 9 while the mobile WPM dataset having no apparent peaks.",
-      "We see that the distribution for the keyboard WPM is much 'wider', indicating that there's a larger range of typing speeds on keyboard than mobile. \
-      This will be discussed further in the Box and Whisker plot as it's much easier and clearer to see the difference.",
+      "From the histogram, we see that both datasets are roughly symmetrical. The keyboard WPM dataset has a single peak at 125 to 130 WPM with a frequency of 9, while the mobile WPM dataset has no apparent peaks.",
+      "We see that the distribution for the keyboard WPM is much 'wider', indicating a larger range of typing speeds on keyboard than mobile. This will be discussed further in the Box and Whisker plot as it's much easier and clearer to see the difference.",
       "Since both datasets are roughly symmetrical, we can use mean as a measure of center.",
     ],
     keyObservations: [
       "The mean of the keyboard WPM dataset is 122.06 WPM while the mobile WPM dataset is 77.91 WPM.",
-      "We see that the mean of my keyboard typing speed is around 44 WPM faster than the mean of my mobile WPM",
-      "The tails of the keyboard WPM dataset are much 'longer' than the tails of the mobile WPM dataset with the keyboard WPM extending up to the 170~ WPM range while the lowest being in the 55-60 WPM range.",
-      "We can confirm the keyboard WPM dataset's much larger spread by looking at the standard deviation (not IQR since our data is not skewed). The standard deviation for the mobile WPM dataset is 16.88 WPM while for keyboard is 27.66 WPM, \
-      which is almost 1.6 times as large, indicating a much larger spread/variability.",
-      "This could be attributed to the consistency of my accuracy in keyboard typing tests. The faster I type, the more likely I will be making mistakes, and the WPM calculation only counts the words that I have typed correctly.",
-      "It looks like there are two outliers in the 105-110 WPM bin and 125-130 WPM bin on the mobile WPM dataset while there are no clear outliers in the keyboard WPM dataset by solely inspecting the histogram.",
+      "We see that the mean of my keyboard typing speed is around 44 WPM faster than the mean of my mobile WPM.",
+      "The tails of the keyboard WPM dataset are much 'longer' than those of the mobile WPM dataset, with keyboard WPM extending up to the 170~ WPM range while the lowest is in the 55-60 WPM range.",
+      "We can confirm the keyboard WPM dataset's much larger spread by looking at the standard deviation (not IQR since our data is not skewed). The standard deviation for the mobile WPM dataset is 16.88 WPM while for keyboard it's 27.66 WPM, which is more than 1.6 times as large, indicating a much larger spread/variability.",
+      "This could be attributed to the consistency of my accuracy in keyboard typing tests. The faster I type, the more likely I am to make mistakes, and the WPM calculation only counts the words that I have typed correctly.",
+      "It looks like there are two outliers in the 105-110 WPM bin and 125-130 WPM bin on the mobile WPM dataset, while there are no clear outliers in the keyboard WPM dataset by solely inspecting the histogram.",
     ],
   };
 
   const boxText = {
     title: "Box and Whisker Plot Analysis",
     overview: [
-      "From the Box and Whisker plot, we observe a similar trend as the histogram, but losing the information about shape and peaks.",
-      "However, we can clearly see that there is one outlier at 126.36 WPM on the mobile WPM dataset as the Box and Whisker plot marks outliers. \
-      On the other hand, there are no outliers for the Keyboard WPM dataset.",
-      "We can discover further insights and comparison by taking a look at the 5 number summary of both datasets (plus the mean).",
+      "From the Box and Whisker plot, we observe a similar trend as the histogram, but lose the information about shape and peaks.",
+      "However, we can clearly see that there is one outlier at 126.36 WPM on the mobile WPM dataset as the Box and Whisker plot marks outliers. On the other hand, there are no outliers for the Keyboard WPM dataset.",
+      "We can discover further insights and comparisons by looking at the 5-number summary of both datasets and the mean (included in the Statistical Summary above but reproduced here for convenience).",
     ],
     keyObservations: [
-      "We can confirm our estimation of the symmetrical shape from the histogram. \
-      The mean (122.06 WPM) and median (125.29 WPM) of the keyboard WPM datasets are very close considering that the data spans from 56.73 WPM to 170.42 WPM. \
-      This is a similar case for the mobile WPM dataset with its median at 78.39 WPM and mean at 77.91 WPM while the dataset spans from 48.47 WPM to 126.36 WPM.",
-      "We can also observe the larger spread/variability of the keyboard dataset by comparing the IQR of both datasets, which is much better displayed in a Box and Whisker Plot. \
-      For the mobile dataset, the IQR sits at 23.65 WPM, meaning 50% of the data is within 23.65 WPM of each other while the keyboard dataset's IQR sits at 36.95 WPM or 50% of \
-      the data is within 36.95 WPM of each other, more than 13 WPM larger, again, displaying a larger spread/variability in the keyboard dataset.",
-      "The difference between median of both datasets is also around 47 WPM with the keyboard WPM leading at 125.29 WPM.",
-      "Each individual 5 number statistic value of the keyboard WPM dataset is greater than the mobile WPM dataset.",
-      "However, the min of the keyboard WPM is very close to the mobile WPM, \
-      only around 8 WPM apart while their max differs by around 44 WPM with the keyboard WPM leading at 170.42 WPM.",
+      "We can confirm our estimation of the symmetrical shape from the histogram. The mean (122.06 WPM) and median (125.29 WPM) of the keyboard WPM datasets are very close considering that the data spans from 56.73 WPM to 170.42 WPM. This is similar for the mobile WPM dataset with its median at 78.39 WPM and mean at 77.91 WPM while the dataset spans from 48.47 WPM to 126.36 WPM.",
+      "We can also observe the larger spread/variability of the keyboard dataset by comparing the IQR of both datasets, which is much better displayed in a Box and Whisker Plot. For the mobile dataset, the IQR is 23.65 WPM, meaning 50% of the data is within 23.65 WPM of each other. The keyboard dataset's IQR is 36.95 WPM, meaning 50% of the data is within 36.95 WPM of each other, more than 13 WPM larger, again displaying a larger spread/variability in the keyboard dataset.",
+      "The difference between medians of both datasets is also around 47 WPM, with the keyboard WPM leading at 125.29 WPM and the mobile trailing at 78.39 WPM.",
+      "Each individual 5-number statistic value of the keyboard WPM dataset is greater than the mobile WPM dataset.",
+      "However, the min of the keyboard WPM (56.73 WPM) is very close to the mobile WPM min (48.47 WPM), being only around 8 WPM apart, while their max differs by around 44 WPM with the keyboard WPM leading at 170.42 WPM and the mobile trailing at 126.36 WPM.",
       "This confirms our observation of a greater variability in the keyboard WPM dataset compared to the mobile WPM dataset as stated in the Histogram analysis.",
-      "We also see that nearly 75% of keyboard WPM is greater than any data points in the mobile WPM dataset: the q1 of the keyboard WPM dataset is 102.91 WPM, nearly as much as the max of the mobile dataset (126.36 WPM). \
-      Combined with the information from the Histogram, we know that there are only 2 data points from the mobile WPM dataset that are greater than the q1 of the keyboard dataset.",
+      "We also see that nearly 75% of keyboard WPM is greater than any data points in the mobile WPM dataset: the Q1 of the keyboard WPM dataset is 102.91 WPM, nearly as much as the max of the mobile dataset (126.36 WPM). Combined with the information from the Histogram, we know that there are only 2 data points from the mobile WPM dataset that are greater than the Q1 of the keyboard dataset.",
     ],
   };
 
   const stemText = {
     title: "Stem and Leaf Plot Analysis",
     overview: [
-      "The Stem and Leaf Plot is similar to a histogram in terms of the information that it displays. But unlike histogram, where we can only see the number of observations that fall within the range of the bin, \
-      the Stem and Leaf Plot allows us to see each individual observation.",
-      "Furthermore, due to the 'back to back' structure of Stem and Leaf Plots, we can see each bin of each dataset being properly aligned to the corresponding bin \
-      of the other dataset, making for an easier comparison.",
+      "The Stem and Leaf Plot is similar to a histogram in terms of the information it displays. Unlike a histogram, where we can only see the number of observations that fall within the range of the bin, the Stem and Leaf Plot allows us to see each individual observation.",
+      "Furthermore, due to the 'back to back' structure of Stem and Leaf Plots, we can see each bin of each dataset properly aligned to the corresponding bin of the other dataset, making for an easier comparison.",
     ],
     keyObservations: [
-      "We can clearly see that the single peak in the keyboard dataset at the 120-125 WPM aligns with the max/outlier of the mobile dataset along with the specific values",
-      "Most information from the Stem and Leaf Plot has already been covered by the histogram, but it is much clearer to observe on the Stem and Leaf Plot along with the \
-      specific values of the observation ",
+      "We can clearly see that the single peak in the keyboard dataset at the 120-125 WPM aligns with the max/outlier of the mobile dataset along with the specific values.",
+      "Most information from the Stem and Leaf Plot has already been covered by the histogram, but it is much clearer to observe on the Stem and Leaf Plot along with the specific values of the observations.",
     ],
   };
 
   const concludingRemarks = {
     title: "Concluding Remarks",
     overview: [
-      "Overall, the comparison of the datasets was interesting. I did not think there would be such a huge difference in terms of spread/variability with the keyboard dataset's \
-      standard deviation being much larger than that of the mobile dataset's (27.66 WPM for keyboard vs 16.88 WPM for mobile). I did expect the mobile typing speeds to be generally slower \
-      than keyboard, but was surprised to see that mobile typing speeds are able to get pretty fast in edge cases (such as the max/outlier in mobile sitting at 126.36 WPM).",
-      "After seeing quite a few observations (14/67 or 20.89%) below the 100 WPM mark, I looked back at the full results of those typing tests and discovered that the accuracy of all those tests \
-      are below 90%, confirming the hypothesis that I had earlier.",
-      "Based on the data, I prefer both the Box and Whisker Plot and Stem and Leaf Plot for making analysis in comparing the datasets. Both types of graphs can be easily stacked \
-      on top of each other or side by side, making for direct and easy comparisons regardless of the value you are comparing. Although we chose mean as the center of measure and \
-      can be easily determined/estimated in the Stem and Leaf Plot but not the Box and Whisker Plot, the Box and Whisker Plot still provides the advantage of splitting data into \
-      quartiles, allowing me to make the observation that nearly 75% of keyboard WPMs are greater than all mobile WPMs. This observation is difficult to see in a Stem and Leaf Plot. \
-      Compared to the histogram, a Stem and Leaf plot simply provides more specific information and allows for easier comparison. And since my dataset is not overwhelmingly large \
-      (67 samples for each dataset), a Stem and Leaf Plot is still feasible without taking up extremely large vertical or horizontal space and thus to me is preferable over the Histogram.",
+      "Overall, the comparison of the datasets was interesting. I did not think there would be such a huge difference in terms of spread/variability, with the keyboard dataset's standard deviation being much larger than that of the mobile dataset's (27.66 WPM for keyboard vs 16.88 WPM for mobile). I expected the mobile typing speeds to be generally slower than keyboard but was surprised to see that mobile typing speeds can get pretty fast in edge cases (such as the max/outlier in mobile sitting at 126.36 WPM).",
+      "After seeing quite a few observations (14/67 or 20.89%) below the 100 WPM mark, I looked back at the full results of those typing tests and discovered that the accuracy of all those tests is below 90%, confirming the hypothesis that I had earlier.",
+      "Based on the data, I prefer both the Box and Whisker Plot and Stem and Leaf Plot for making analyses in comparing the datasets. Both types of graphs can be easily stacked on top of each other or side by side, making for direct and easy comparisons regardless of the value you are comparing. Although we chose mean as the center of measure and it can be easily determined/estimated in the Stem and Leaf Plot but not the Box and Whisker Plot, the Box and Whisker Plot still provides the advantage of splitting data into quartiles, allowing me to make the observation that nearly 75% of keyboard WPMs are greater than all mobile WPMs. This observation is difficult to see in a Stem and Leaf Plot. Compared to the histogram, a Stem and Leaf plot simply provides more specific information and allows for easier comparison. Since my dataset is not overwhelmingly large (67 samples for each dataset), a Stem and Leaf Plot is still feasible without taking up extremely large vertical or horizontal space and thus, to me, is preferable over the Histogram.",
     ],
   };
   return (
@@ -126,7 +101,7 @@ function App() {
         mobileData={[]}
         keyboardData={[]}
         extraText={[
-          `I wrote the website using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
+          `I wrote and designed the website using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
         <a href="https://github.com/andyw-0612/ap-stats-project1" target="_blank" rel="noopener noreferrer">GitHub</a>`,
         ]}
       />
