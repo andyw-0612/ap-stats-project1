@@ -32,10 +32,10 @@ function App() {
       "If some texts don't display properly, please make sure your browser is in light mode.",
       "The datasets I chose are results from typing tests using keyboard and mobile. Both datasets are produced by myself \
       through completing the 'words 10 english' test on monkeytype.com on an iPhone and an Apple Magic Keyboard for the mobile \
-      typing speed dataset and the keyboard typing speed dataset, respectively. Both datasets contain 67 samples for the sake of comparison.",
+      typing speed dataset and the keyboard typing speed dataset, respectively.",
       "Word Per Minute (WPM) is calculated as (number of characters typed correctly / 5) * (60 / time spent typing). \
       This is a common formula for calculating an accurate WPM considering the lengths of different words.",
-      "The datasets are comprised of 30~ test results recorded as WPM. I wanted to explore the difference between keyboard typing and mobile typing. \
+      "The datasets are comprised of 67 test results recorded as WPM. I wanted to explore the difference between keyboard typing and mobile typing. \
       I understand that in most cases, keyboard will be faster than typing on mobile but I'm curious to see the variability, distribution, and specific differences between the two methods.",
       `I wrote the website using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
       <a href="https://github.com/andyw-0612/ap-stats-project1" target="_blank" rel="noopener noreferrer">GitHub</a>`,
