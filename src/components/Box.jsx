@@ -78,7 +78,11 @@ const Box = () => {
           <div className="flex justify-between h-52 special-padding-grid">
             {/* Grid lines */}
             {tickValues.map((tick, index) => (
-              <div key={index} className="top-0 h-full w-px bg-gray-200"></div>
+              <div
+                key={index}
+                className="top-0 h-full w-px bg-gray-200"
+                id={`box-grid-${index}`}
+              ></div>
             ))}
           </div>
 
