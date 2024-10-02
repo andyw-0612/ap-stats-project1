@@ -37,8 +37,6 @@ function App() {
       This is a common formula for calculating an accurate WPM considering the lengths of different words.",
       "The datasets are comprised of 67 test results recorded as WPM. I wanted to explore the difference between keyboard typing and mobile typing. \
       I understand that in most cases, keyboard will be faster than typing on mobile but I'm curious to see the variability, distribution, and specific differences between the two methods.",
-      `I wrote the website using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
-      <a href="https://github.com/andyw-0612/ap-stats-project1" target="_blank" rel="noopener noreferrer">GitHub</a>`,
     ],
     keyObservations: [""],
   };
@@ -127,6 +125,10 @@ function App() {
         keyObservations={[]}
         mobileData={[]}
         keyboardData={[]}
+        extraText={[
+          `I wrote the website using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
+        <a href="https://github.com/andyw-0612/ap-stats-project1" target="_blank" rel="noopener noreferrer">GitHub</a>`,
+        ]}
       />
       <StatisticalSummary
         title="Statistical Summary"

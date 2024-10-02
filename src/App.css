@@ -79,9 +79,33 @@
 }
 
 #box-grid-3 {
-    margin-right: 15px;
+    margin-right: 0px;
 }
 
 #box-grid-4 {
     margin-right: 7px;
+}
+
+#median-Mobile {
+    left: 27.7143%;
+}
+
+#min-hori-Keyboard {
+    left: 13.95% !important;
+    width: 30.9857% !important;
+    top: 50%;
+}
+
+#min-Keyboard {
+    left: 13.95% !important;
+}
+
+#max-Mobile {
+    left: 45.6929% !important;
+}
+
+#max-hori-Mobile {
+    left: 34.0214% !important;
+    width: 11.6714% !important;
+    top: 50%;
 }

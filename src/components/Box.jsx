@@ -116,6 +116,7 @@ const Box = () => {
                         width: `${((data.q1 - data.min) / (maxWPM - minWPM)) * 100}%`,
                         top: "50%",
                       }}
+                      id={`min-hori-${device}`}
                     ></div>
                     <div
                       className={`absolute h-0.5 ${color}`}
@@ -124,6 +125,7 @@ const Box = () => {
                         width: `${((data.max - data.q3) / (maxWPM - minWPM)) * 100}%`,
                         top: "50%",
                       }}
+                      id={`max-hori-${device}`}
                     ></div>
 
                     {/* Vertical lines */}
@@ -132,6 +134,7 @@ const Box = () => {
                       style={{
                         left: `${((data.min - minWPM) / (maxWPM - minWPM)) * 100}%`,
                       }}
+                      id={`min-${device}`}
                     ></div>
                     <div
                       className={`absolute w-0.5 h-16 ${color}`}
@@ -144,6 +147,7 @@ const Box = () => {
                       style={{
                         left: `${((data.median - minWPM) / (maxWPM - minWPM)) * 100}%`,
                       }}
+                      id={`median-${device}`}
                     ></div>
                     <div
                       className={`absolute w-0.5 h-16 ${color}`}
@@ -156,6 +160,7 @@ const Box = () => {
                       style={{
                         left: `${((data.max - minWPM) / (maxWPM - minWPM)) * 100}%`,
                       }}
+                      id={`max-${device}`}
                     ></div>
 
                     {/* Horizontal lines */}

@@ -6,6 +6,7 @@ const TextSummary = ({
   keyObservations,
   mobileData,
   keyboardData,
+  extraText = [],
 }) => {
   const calculateFiveNumberSummary = (data) => {
     if (!data || data.length === 0) return null;
@@ -55,9 +56,20 @@ mean: ${summary.mean.toFixed(2)}`}
               Overview
             </h3>
             {overview.map((paragraph, index) => (
+              <p key={index} className="text-gray-600 mb-3 pl-4 pr-4">
+                <pre style={{ display: "inline" }}>&#9;</pre>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        )}
+
+        {extraText && extraText.length > 0 && (
+          <div className="mb-6">
+            {extraText.map((paragraph, index) => (
               <p
                 key={index}
-                className="text-gray-600 mb-3 pl-4 pr-4"
+                className="text-gray-600 mb-3 pl-4 pr-4 text-center"
                 dangerouslySetInnerHTML={{ __html: paragraph }}
               ></p>
             ))}
@@ -93,6 +105,7 @@ mean: ${summary.mean.toFixed(2)}`}
             </h3>
             {keyObservations.map((observation, index) => (
               <p key={index} className="text-gray-600 mb-3 pl-4 pr-4">
+                <pre style={{ display: "inline" }}>&#9;</pre>
                 {observation}
               </p>
             ))}
