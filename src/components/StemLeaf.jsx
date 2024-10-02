@@ -39,7 +39,26 @@ const StemLeaf = () => {
     return stems;
   };
 
-  const mobileStems = processData(mobileData);
+  const processDataReverse = (data) => {
+    const stems = {};
+    data.forEach((value) => {
+      const stem = Math.floor(value / 10);
+      const leaf = value % 10;
+      if (!stems[stem]) stems[stem] = { lower: [], upper: [] };
+      if (leaf < 5) {
+        stems[stem].lower.push(leaf.toFixed(2));
+      } else {
+        stems[stem].upper.push(leaf.toFixed(2));
+      }
+    });
+    Object.values(stems).forEach((stem) => {
+      stem.lower.sort((a, b) => parseFloat(b) - parseFloat(a));
+      stem.upper.sort((a, b) => parseFloat(b) - parseFloat(a));
+    });
+    return stems;
+  };
+
+  const mobileStems = processDataReverse(mobileData);
   const keyboardStems = processData(keyboardData);
   const allStems = [
     ...new Set([...Object.keys(mobileStems), ...Object.keys(keyboardStems)]),
@@ -47,7 +66,7 @@ const StemLeaf = () => {
 
   return (
     <div className="flex flex-col items-center bg-gray-100 p-8">
-      <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl w-full mb-8">
+      <div className="bg-white p-4 rounded-lg shadow-lg max-w-4xl w-full mb-8">
         <h2 className="text-2xl font-bold mb-10 text-center text-gray-800">
           Stem and Leaf Plot: Typing Speed Comparison
         </h2>

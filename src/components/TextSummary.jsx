@@ -55,9 +55,11 @@ mean: ${summary.mean.toFixed(2)}`}
               Overview
             </h3>
             {overview.map((paragraph, index) => (
-              <p key={index} className="text-gray-600 mb-3">
-                {paragraph}
-              </p>
+              <p
+                key={index}
+                className="text-gray-600 mb-3 pl-4 pr-4"
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+              ></p>
             ))}
           </div>
         )}
@@ -86,14 +88,14 @@ mean: ${summary.mean.toFixed(2)}`}
 
         {keyObservations && keyObservations.length > 0 && (
           <div>
-            <h3 className="text-xl font-semibold mb-2 text-center text-gray-700">
+            <h3 className="text-xl font-semibold mb-2 text-gray-700 text-center">
               Key Observations
             </h3>
-            <ul className="list-disc list-inside text-gray-600">
-              {keyObservations.map((observation, index) => (
-                <li key={index}>{observation}</li>
-              ))}
-            </ul>
+            {keyObservations.map((observation, index) => (
+              <p key={index} className="text-gray-600 mb-3 pl-4 pr-4">
+                {observation}
+              </p>
+            ))}
           </div>
         )}
       </div>
