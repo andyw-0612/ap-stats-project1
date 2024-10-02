@@ -7,6 +7,7 @@ const TextSummary = ({
   mobileData,
   keyboardData,
   extraText = [],
+  overviewTitle = true,
 }) => {
   const calculateFiveNumberSummary = (data) => {
     if (!data || data.length === 0) return null;
@@ -52,9 +53,11 @@ mean: ${summary.mean.toFixed(2)}`}
 
         {overview && overview.length > 0 && (
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2 text-center text-gray-700">
-              Overview
-            </h3>
+            {overviewTitle == true && (
+              <h3 className="text-xl font-semibold mb-2 text-center text-gray-700">
+                Overview
+              </h3>
+            )}
             {overview.map((paragraph, index) => (
               <p key={index} className="text-gray-600 mb-3 pl-4 pr-4">
                 <pre style={{ display: "inline" }}>&#9;</pre>

@@ -165,6 +165,7 @@ function App() {
         keyObservations={[]}
         mobileData={[]}
         keyboardData={[]}
+        overviewTitle={false}
       />
     </>
   );
