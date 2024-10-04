@@ -101,7 +101,7 @@ function App() {
         mobileData={[]}
         keyboardData={[]}
         extraText={[
-          `I wrote and designed the website using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
+          `I wrote and designed the website and graphs using <a href="https://reactjs.org" target="_blank">ReactJS</a>, the full source code is available at my \
         <a href="https://github.com/andyw-0612/ap-stats-project1" target="_blank" rel="noopener noreferrer">GitHub</a>`,
         ]}
       />
